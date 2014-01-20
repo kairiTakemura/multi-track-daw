@@ -49,3 +49,4 @@ gem 'rails_12factor', group: :production
 gem 'rspec-rails', '~> 2.0', group: [:development, :test]
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+gem 'rspec-rails', '~> 2.0', group: [:development, :test]
