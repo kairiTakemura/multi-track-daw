@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: YpJBmcBrG3W4er/+jZToR6F9PNArbNv18ZxaCZXFpxeW0XDio+sDUHRDRNUpWNTQRUTiCEcimgWxTsCSOKw/dhylvjihr5N/yeYRgB1D4E8tURvG+RjuiWiy6F4TJqoKW8sgM33+6HbC8IHo1XGVWjxFSacm31e9Xae6TEqTd8Q=
+  app: infinite-dusk-9347
+  on:
+    repo: kzhd15med3gh/multi-track-daw
+  run: "rake db:migrate"
