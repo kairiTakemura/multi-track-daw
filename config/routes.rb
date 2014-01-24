@@ -1,7 +1,6 @@
 MultiTrackDaw::Application.routes.draw do
   resources :projects
 
-  resources :daws
 
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
