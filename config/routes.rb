@@ -1,4 +1,6 @@
 MultiTrackDaw::Application.routes.draw do
+  resources :projects
+
   resources :daws
 
   get "welcome/index"
