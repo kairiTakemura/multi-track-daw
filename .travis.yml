@@ -4,8 +4,8 @@ rvm:
 deploy:
   provider: heroku
   api_key:
-    secure: YpJBmcBrG3W4er/+jZToR6F9PNArbNv18ZxaCZXFpxeW0XDio+sDUHRDRNUpWNTQRUTiCEcimgWxTsCSOKw/dhylvjihr5N/yeYRgB1D4E8tURvG+RjuiWiy6F4TJqoKW8sgM33+6HbC8IHo1XGVWjxFSacm31e9Xae6TEqTd8Q=
+    secure: jUW9R+DMjEJBTQlTLkzvFaK9gMgVdC9BjyWd5ufS4WoxuVDbtyx7ZyHVVr02luxGOz1NurzC8qeMwqxoTjHmEq1fHbWwhlDSXYog5MB4pLpJM3xfSzV5ksIz5S+TQMPAvXJ39JQ4CH+V1WvvMYmQFmzxE9sVjtWe2+8yU9hiWKY=
   app: infinite-dusk-9347
   on:
     repo: kzhd15med3gh/multi-track-daw
-  run: "rake db:migrate"
+  run: rake db:migrate
