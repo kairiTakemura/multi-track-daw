@@ -8,4 +8,4 @@ deploy:
   app: infinite-dusk-9347
   on:
     repo: kzhd15med3gh/multi-track-daw
-  run: rake db:migrate
+  run: "rake db:migrate"
