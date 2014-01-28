@@ -1,4 +1,8 @@
 MultiTrackDaw::Application.routes.draw do
+
+	resources :users
+	get "users/new"
+  
   resources :projects
 
 

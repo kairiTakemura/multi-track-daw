@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Use secure_password for authenticaton
+gem 'bcrypt-ruby'
+
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
 
