@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Use secure_password for authenticaton
 gem 'bcrypt-ruby'
 
+# Ember.js
+gem 'emberjs-rails'
+
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
 
