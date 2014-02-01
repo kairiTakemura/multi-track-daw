@@ -1,5 +1,8 @@
 MultiTrackDaw::Application.routes.draw do
 
+	resources :sessions
+	get "sessions/new"
+
 	resources :users
 	get "users/new"
   

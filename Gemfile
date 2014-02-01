@@ -53,11 +53,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rspec-rails', '~> 2.0', group: [:development, :test]
-gem 'pg', group: :production
-gem 'rails_12factor', group: :production
-gem 'rspec-rails', '~> 2.0', group: [:development, :test]
-gem 'pg', group: :production
-gem 'rails_12factor', group: :production
-gem 'rspec-rails', '~> 2.0', group: [:development, :test]
-gem 'pg', group: :production
+gem 'pg', group: [:development, :test, :production]
 gem 'rails_12factor', group: :production
