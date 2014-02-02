@@ -36,7 +36,7 @@
 
           <ul class="nav nav-tabs" style="width:800px;">
             <li class="active"><a href="#pianorolltab" data-toggle="tab">Ch 1</a></li>
-            <li class="active"><a href="#pianorolltab" data-toggle="tab">Ch 2</a></li>
+            <li id="add" class="deactive" style="float:right;"><a href="#pianorolltab" data-toggle="tab">追加</a></li>
           </ul>
           
           
@@ -166,6 +166,24 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
+      <!-- New Track Dialog -->
+      <div class="modal fade" id="newTrackDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title"><span class="glyphicon glyphicon-log-out"></span> 新しいTrack</h4>
+            </div>
+            <div class="modal-body">
+              <select id="newTrack" type="text" class="form-control"></select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="newTrackB">作成</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
 
       

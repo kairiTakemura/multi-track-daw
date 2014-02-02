@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Track do
+describe Instrument do
   pending "add some examples to (or delete) #{__FILE__}"
 end

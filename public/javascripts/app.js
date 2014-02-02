@@ -87,6 +87,18 @@ function showMidiInOutSelM(elem, checkType) {
     b.dispatchEvent(e);
 }
 
+function showNewTrackDialog(elem, checkType) {
+    var message="", className="", elemName="";
+    elemName="newTrackDialog";
+    message="Please enter new track infomation.";
+
+    var type="click";
+    var e=document.createEvent('MouseEvent');
+    var b=document.getElementById(elemName);
+    e.initEvent(type, true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+    b.dispatchEvent(e);
+}
+
 // sing mode
 var singMode="inputtext"; // autodoremi
 document.getElementById("inputTextMode").addEventListener("click", function(event){
@@ -391,3 +403,9 @@ document.getElementById("fileExport").addEventListener("click", function(event){
 }, false);
 
 document.getElementById("fileImport").addEventListener("change", pRoll.importNoteStackFunc, false);
+
+document.getElementById("add").addEventListener("click", function(evnet){
+	// Add new track to project
+	//showMidiInOutSelM("divMidiOutSelWarning", "OUT", "resetAllController");
+	//showNewTrackDialog();
+}, false);
