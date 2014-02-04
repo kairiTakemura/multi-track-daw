@@ -23,6 +23,7 @@ $("#divSetOutput").on("click", function() {
 $("#midiOutSelM").on("shown.bs.modal", function(event) {
     clearAllAlertMessageInModal("divMidiOutSelWarning");
     showMidiInOutSelM("divMidiOutSelWarning", "OUT");
+    console.trace();
 });
 $("#midiOutSelM").on("hidden.bs.modal", function(event) {
     clearAllAlertMessageInModal("divMidiOutSelWarning");
@@ -43,6 +44,22 @@ $("#midiInSelM").on("hidden.bs.modal", function(event) {
     clearAllAlertMessageInModal("divMidiInSelWarning");
 });
 
+// new track modal
+var $newTrackModal=$("#newTrackM").modal({
+    show: false
+});
+$("#divNewTrack").on("click", function() {
+    $newTrackModal.modal("show");
+});
+/* TODO 削除可否未確認
+$("#newTrackM").on("shown.bs.modal", function(event) {
+    clearAllAlertMessageInModal("divMidiInSelWarning");
+    showNewTrackM("divMidiInSelWarning", "IN");
+});
+$("#newTrackM").on("hidden.bs.modal", function(event) {
+    clearAllAlertMessageInModal("divMidiInSelWarning");
+});
+*/
 function clearAllAlertMessageInModal(parentElem) {
     var messageInModal=document.getElementById(parentElem);
     while(messageInModal.firstChild) {
@@ -80,18 +97,6 @@ function showMidiInOutSelM(elem, checkType) {
         divAlert.innerHTML=message;
         document.getElementById(elem).appendChild(divAlert);
     }
-    var type="click";
-    var e=document.createEvent('MouseEvent');
-    var b=document.getElementById(elemName);
-    e.initEvent(type, true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
-    b.dispatchEvent(e);
-}
-
-function showNewTrackDialog(elem, checkType) {
-    var message="", className="", elemName="";
-    elemName="newTrackDialog";
-    message="Please enter new track infomation.";
-
     var type="click";
     var e=document.createEvent('MouseEvent');
     var b=document.getElementById(elemName);
@@ -406,6 +411,5 @@ document.getElementById("fileImport").addEventListener("change", pRoll.importNot
 
 document.getElementById("add").addEventListener("click", function(evnet){
 	// Add new track to project
-	//showMidiInOutSelM("divMidiOutSelWarning", "OUT", "resetAllController");
-	//showNewTrackDialog();
+    $("#newTrackM").modal("show");
 }, false);

@@ -181,23 +181,12 @@ PianoRoll.prototype={
                             noteOn[ns]=true;
                         }
                         break;
-                        
-                      case 0xC0:
-                        if(noteOn[ns]!==true) {
-                            self.noteOnFunc([0xC0, n.note, 0x59], (n.s-1) * 1000*60/tempo + self.time.start);
-                            noteOn[ns]=true;
-                        }
-                        break;
                     }
                 }
                 if(n.e==Math.ceil(10*self.now.x/(self.sizes.roll.tick1))/10+self.time.latency/1000) {
                     switch(n.type) {
                       case 0x90:
                         self.noteOnFunc([0x80, n.note, 0x59], (n.e) * 1000*60/tempo + self.time.start);
-                        break;
-                        
-                      case 0xC0:
-                        self.noteOnFunc([0xC0, n.note, 0x59], (n.e) * 1000*60/tempo + self.time.start);
                         break;
                     }
                 }
