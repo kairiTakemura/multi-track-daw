@@ -413,3 +413,19 @@ document.getElementById("add").addEventListener("click", function(evnet){
 	// Add new track to project
     $("#newTrackM").modal("show");
 }, false);
+
+document.getElementById("newTrackB").addEventListener("click", function(event){
+	var a = document.createElement("a");
+	a.href = "#pianorolltab";
+	a.setAttribute("data-toggle", "tab");
+	a.textContent = "Ch 22";
+	
+	var li = document.createElement("li");
+	li.className = "active";
+	li.appendChild(a);
+	
+	document.getElementById("tracks").appendChild(li);
+	
+	document.getElementById("add").className = "deactive";
+    $("#newTrackM").modal("hide");
+});

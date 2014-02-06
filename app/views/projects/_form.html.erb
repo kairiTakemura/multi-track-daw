@@ -34,7 +34,7 @@
 
           <div style="margin-top:10px;"></div>
 
-          <ul class="nav nav-tabs" style="width:800px;">
+          <ul id="tracks" class="nav nav-tabs" style="width:800px;">
             <li class="active"><a href="#pianorolltab" data-toggle="tab">Ch 1</a></li>
             <li id="add" class="deactive" style="float:right;"><a href="#pianorolltab" data-toggle="tab">追加</a></li>
           </ul>
@@ -176,6 +176,8 @@
             </div>
             <div class="modal-body">
 				<%= form_for @project , :html => {:class=> 'form-control'} do |f| %>
+					<%= f.label :track_name %>
+					<%= text_field :track, :name %><br />
 					<%= f.label :insturument_id %>
 					<%= f.collection_select :id, Instrument.all, :id, :name %>
 				<%- end -%>
