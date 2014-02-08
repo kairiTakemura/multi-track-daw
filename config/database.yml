@@ -9,6 +9,7 @@ development:
   database: daw_development
   pool: 5
   username: daw
+  password: daw
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

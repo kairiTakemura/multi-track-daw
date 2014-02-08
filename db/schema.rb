@@ -23,36 +23,13 @@ ActiveRecord::Schema.define(version: 20140202133939) do
   end
 
   create_table "projects", force: true do |t|
-
-    t.string   "name"
-    t.integer  "tempo"
-    t.integer  "user_id"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
-
-  create_table "tracks", force: true do |t|
-
-    t.string   "name"
-    t.integer  "instrument"
-    t.text     "score"
-    t.integer  "project_id"
-    t.integer  "user_id"
-
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "tracks", ["project_id"], name: "index_tracks_on_project_id"
-  add_index "tracks", ["user_id"], name: "index_tracks_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "password_digest"
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
